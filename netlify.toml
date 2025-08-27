@@ -1,5 +1,7 @@
 [build]
   command = ""
+  # Publish from root directory where index.html is located
+  # Alternative: use "dist" if Netlify expects dist folder
   publish = "."
 
 [[redirects]]
