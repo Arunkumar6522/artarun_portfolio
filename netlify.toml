@@ -5,10 +5,7 @@
   # Publish the root directory (where index.html is located)
   publish = "."
 
-[build.environment]
-  # Disable yarn/npm dependency checks
-  NODE_VERSION = "18"
-
+# Static file headers
 [[headers]]
   # Apply caching headers to static assets
   for = "/dist/*"
@@ -24,14 +21,7 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Handle client-side routing (if needed in the future)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin"]}
-
-# 404 page redirect
+# Redirects for clean URLs and 404 handling
 [[redirects]]
   from = "/*"
   to = "/404/index.html"
