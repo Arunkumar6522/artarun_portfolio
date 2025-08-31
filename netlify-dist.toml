@@ -1,9 +1,0 @@
-[build]
-  command = ""
-  # Publish from dist directory (alternative configuration)
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/404/index.html"
-  status = 404
